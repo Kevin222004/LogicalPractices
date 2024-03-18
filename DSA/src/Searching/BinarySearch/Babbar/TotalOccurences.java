@@ -2,7 +2,7 @@
 
 --> total occurence
 
-method 1 :- last occurnece - first occurence + 1;
+method 1 :- last occurrence - first occurrence + 1;
 
 */
 

@@ -49,13 +49,13 @@ public class findDuplicateElement {
                 break;
             }
 
-//            mark negative
+            // mark negative
             arr[index] *= -1;
         }
         return ans;
     }
 
-    // Method 3 --> positioning methhod
+    // Method 3 --> positioning method
     static int FindDuplicatee(int[] arr) {
         while (arr[0] != arr[arr[0]]) {
             int temp = arr[arr[0]];
