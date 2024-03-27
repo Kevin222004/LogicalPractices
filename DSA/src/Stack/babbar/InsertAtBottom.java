@@ -16,16 +16,18 @@ public class InsertAtBottom {
         Stack<Integer> stack = new Stack<Integer>();
         stack.push(5);
         stack.push(15);stack.push(24);stack.push(32);
-        stack.push(11);
-        insertAtBottom(stack, stack.peek());
+
+        insertAtBottom(stack, 11);
         System.out.println(stack.lastElement());
-        for (int i = 0; i < stack.capacity(); i++) {
+        System.out.println("==========");
+        while (!stack.isEmpty()) {
+            System.out.println(stack.peek());
             stack.pop();
         }
     }
 
     static void insertAtBottom(Stack<Integer> stack, int val) {
-        if (stack.capacity()==0) {
+        if (stack.isEmpty()) {
             stack.push(val);
             return;
         }
