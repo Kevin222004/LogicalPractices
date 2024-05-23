@@ -2,7 +2,8 @@ package RecursionAndBackTracking.l2;
 
 public class PrintDigitOfNumber {
     public static void main(String[] args) {
-        PrintAllDigit(0647);
+        System.out.println(647%10);
+        PrintAllDigit(647);
     }
 
     static void PrintAllDigit(int n) {

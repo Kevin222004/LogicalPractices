@@ -22,6 +22,7 @@ public class MinimumElementToAcquireTarget {
         System.out.println(ans);
     }
 
+//    minimum wala case
     static int solve(List<Integer> list, int target) {
         // base case
         if (target == 0) {
@@ -41,7 +42,4 @@ public class MinimumElementToAcquireTarget {
 
         return mini;
     }
-
-//    do positive wala case with your own
-
 }

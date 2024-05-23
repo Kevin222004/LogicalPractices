@@ -11,7 +11,7 @@ but step allowed are
 
 find no of ways to reach nth stair
 
-f
+look in notes
 
 */
 
