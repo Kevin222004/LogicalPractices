@@ -1,6 +1,6 @@
 package LinkedList.Kunal;
 
-public class SinglyLinkedListImplementation {
+public class  SinglyLinkedListImplementation {
     public static void main(String[] args) {
         SinglyLinkedList ll = new SinglyLinkedList();
         ll.insertAtLast(1);
