@@ -1,4 +1,4 @@
-package Tree.KunalsTree.binarySearchTreeImplementation;
+package Tree.Implementation.BinarySearchTree;
 
 import java.util.Scanner;
 
@@ -33,8 +33,6 @@ public class BinarySearchTreeImplementation {
     public void takeInput() {
         Scanner sc = new Scanner(System.in);
         int data = sc.nextInt();
-        Node root = new Node(data);
-        this.root =root;
         while (data != -1) {
             root = insertIntoBst(root, data);
             data = sc.nextInt();
@@ -44,17 +42,19 @@ public class BinarySearchTreeImplementation {
     public Node insertIntoBst(Node node, int data) {
         if (node == null) {
             node = new Node(data);
+            if (root == null) {
+                root = node;
+            }
             return node;
         }
 
         if (node.value > data) {
             node.left = insertIntoBst(node.left, data);
-            return node.left;
-        }else {
+        } else {
             node.right = insertIntoBst(node.right, data);
-            return node.right;
         }
 
+        return node; // Return the current node with updated children
     }
 
     private class Node {

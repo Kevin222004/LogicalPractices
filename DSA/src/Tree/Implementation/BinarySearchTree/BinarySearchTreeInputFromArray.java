@@ -1,19 +1,14 @@
-package Tree.KunalsTree.binarySearchTreeImplementation;
+package Tree.Implementation.BinarySearchTree;
 
 import java.util.Scanner;
 
-public class BinarySearchTreeImplementation {
+public class BinarySearchTreeInputFromArray {
 
     private Node root;
 
-    public BinarySearchTreeImplementation() {
+    public BinarySearchTreeInputFromArray() {
     }
-
-    public int getHeight(Node node) {
-        if (node == null) return -1;
-        return node.height;
-    }
-
+    
     public boolean isEmpty() {
         return root == null;
     }
@@ -30,38 +25,37 @@ public class BinarySearchTreeImplementation {
         display(root.right, "right child of " + root.getValue() + " : ");
     }
 
-    public void takeInput() {
-        Scanner sc = new Scanner(System.in);
-        int data = sc.nextInt();
-        Node root = new Node(data);
-        this.root =root;
-        while (data != -1) {
-            root = insertIntoBst(root, data);
-            data = sc.nextInt();
+    public void takeInput(int[] arr) {
+        int i = 0;
+        while (i < arr.length) {
+            root = insertIntoBst(root, arr[i]);
+            i++;
         }
     }
 
     public Node insertIntoBst(Node node, int data) {
         if (node == null) {
             node = new Node(data);
+            if (root == null) {
+                root = node;
+            }
             return node;
         }
 
         if (node.value > data) {
             node.left = insertIntoBst(node.left, data);
-            return node.left;
-        }else {
+        }
+        else {
             node.right = insertIntoBst(node.right, data);
-            return node.right;
         }
 
+        return node;
     }
 
-    private class Node {
+    private static class Node {
         private int value;
         private Node left;
         private Node right;
-        private int height;
 
         public Node(int value) {
             this.value = value;

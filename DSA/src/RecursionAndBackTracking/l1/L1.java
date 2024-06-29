@@ -58,8 +58,8 @@ public class L1 {
     public static void main(String[] args) {
 //        System.out.println(factorial(3));
 //        printCountingRevrese(10);
-//        printCounting(10);
-        System.out.println(fibonacci(8));
+        printCounting(10);
+//        System.out.println(fibonacci(8));
     }
 
 
