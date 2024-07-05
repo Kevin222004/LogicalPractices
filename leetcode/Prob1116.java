@@ -7,7 +7,7 @@ import java.util.List;
 public class Prob1116 {
 }
 
-class Solution {
+class Solution1116 {
     public int countCharacters(String[] words, String chars) {
         List<String> str = new ArrayList<>();
         HashMap<String, Integer> hash = new HashMap<>();
