@@ -1,4 +1,4 @@
 package RecursionAndBackTracking.Assign;
 
-public class ReverseAString {
+public class LastOccurenceOfAChar {
 }

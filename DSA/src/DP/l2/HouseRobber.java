@@ -1,16 +1,21 @@
 package DP.l2;
 
 public class HouseRobber {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 1};
+        SolutionHouseRobber sol = new SolutionHouseRobber();
+        System.out.println(sol.rob(arr));
+    }
 }
 
 class SolutionHouseRobber {
     public int rob(int[] nums) {
-        // return roberryWithRecursion(nums, 0, 0);
+         return roberryWithRecursion(nums, 0);
         // int[] dpArr = new int[nums.length+1];
         // Arrays.fill(dpArr, -1);
         // return roberryWithTopDown(nums, nums.length-1, dpArr);
 //        return roberryWithBottomUp(nums);
-        return roberryWithSpaceOptimization(nums, nums.length-1);
+//        return roberryWithSpaceOptimization(nums, nums.length-1);
     }
 
     // recursion (TLE)
@@ -19,7 +24,7 @@ class SolutionHouseRobber {
             return 0;
         }
 
-        int inclusion = roberryWithRecursion(nums, index + 2);
+        int inclusion = roberryWithRecursion(nums, index + 2) + nums[index];
         int exclusion = roberryWithRecursion(nums, index + 1);
 
         return Math.max(inclusion, exclusion);
