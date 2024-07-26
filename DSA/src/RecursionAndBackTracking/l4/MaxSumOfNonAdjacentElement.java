@@ -23,9 +23,9 @@ public class MaxSumOfNonAdjacentElement {
         }
 
         // include
-        maxSumOfNonAdjElem(arr, sum+arr[i], maxi, i+2);
+        int inc = maxSumOfNonAdjElem(arr, sum+arr[i], maxi, i+2);
         // exclude
-        maxSumOfNonAdjElem(arr, sum, maxi, i+1);
-        return sum;
+        int exc = maxSumOfNonAdjElem(arr, sum, maxi, i+1);
+        return Math.max(inc, exc);
     }
 }

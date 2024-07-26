@@ -16,7 +16,7 @@ public class ReverseALinkedList {
 
     }
 
-    static class SinglyLinkedList {
+     static class SinglyLinkedList {
 
         private Node Head;
 
