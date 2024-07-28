@@ -1,0 +1,1 @@
+public class Prob1547 {}
