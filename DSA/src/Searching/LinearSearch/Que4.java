@@ -1,6 +1,5 @@
 package Searching.LinearSearch;
 
-import java.nio.file.Paths;
 import java.util.Arrays;
 
 public class Que4 {

@@ -5,6 +5,7 @@ import java.util.*;
 public class BFSndDFS {
     static Map<Integer, Boolean> visited = new HashMap<>();
     static Map<Integer, Boolean> visited2 = new HashMap<>();
+
     public static void main(String[] args) {
         GraphBFS g = new GraphBFS();
         g.addEdge(0, 1, false);

@@ -6,7 +6,7 @@ public class QuickSort {
     public static void main(String[] args) {
         int[] arr1 = {5, 2, 1, 4, 56, 32, 8};
         System.out.println(Arrays.toString(arr1));
-        sort(arr1, 0, arr1.length-1);
+        sort(arr1, 0, arr1.length - 1);
         System.out.println(Arrays.toString(arr1));
     }
 
@@ -17,7 +17,7 @@ public class QuickSort {
 
         int s = low;
         int e = high;
-        int m = s + (e-s)/2;
+        int m = s + (e - s) / 2;
         int pivot = nums[m];
 
         while (s <= e) {

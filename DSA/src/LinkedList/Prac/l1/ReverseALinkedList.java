@@ -2,8 +2,12 @@ package LinkedList.Prac.l1;
 
 public class ReverseALinkedList {
     public static void main(String[] args) {
-        SinglyLinkedList ll= new SinglyLinkedList();
-        ll.insertAtFirst(5);ll.insertAtFirst(4);ll.insertAtFirst(3);ll.insertAtFirst(2);ll.insertAtFirst(1);
+        SinglyLinkedList ll = new SinglyLinkedList();
+        ll.insertAtFirst(5);
+        ll.insertAtFirst(4);
+        ll.insertAtFirst(3);
+        ll.insertAtFirst(2);
+        ll.insertAtFirst(1);
         ll.printLinkedList();
 
         Node prev = null;
@@ -16,7 +20,7 @@ public class ReverseALinkedList {
 
     }
 
-     static class SinglyLinkedList {
+    static class SinglyLinkedList {
 
         private Node Head;
 
@@ -29,7 +33,7 @@ public class ReverseALinkedList {
         }
 
         //--------------------------------------Reverse-------------------------------------//\
-        public Node reverse(Node prev,Node curr) {
+        public Node reverse(Node prev, Node curr) {
             if (curr == null) {
                 return prev;
             }
@@ -66,15 +70,17 @@ public class ReverseALinkedList {
 
             size++;
         }
-    public void printLinkedList() {
-        Node tempNode = Head;
-        while (tempNode != null) {
-            System.out.print(tempNode.value + " --> ");
-            tempNode = tempNode.nextNode;
+
+        public void printLinkedList() {
+            Node tempNode = Head;
+            while (tempNode != null) {
+                System.out.print(tempNode.value + " --> ");
+                tempNode = tempNode.nextNode;
+            }
+            System.out.println();
         }
-        System.out.println();
     }
-    }
+
     private static class Node {
         private final int value;
         private Node nextNode;

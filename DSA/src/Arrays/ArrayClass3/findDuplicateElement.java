@@ -25,7 +25,7 @@ public class findDuplicateElement {
         int point;
         for (int i = 0; i < arr.length; i++) {
             point = arr[i];
-            for (int j= i+1; j < arr.length; j++) {
+            for (int j = i + 1; j < arr.length; j++) {
                 if (arr[j] == point) {
                     return arr[j];
                 }
@@ -37,14 +37,14 @@ public class findDuplicateElement {
     // negative marking method array is getting modifed
     static int FindDuplicate2(int[] arr) {
         int ans = -1;
-        for (int i =0; i< arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             int index = arr[i];
             if (index < 0) {
                 index = index * -1;
             }
 
             // already visited
-            if(arr[index] < 0) {
+            if (arr[index] < 0) {
                 ans = index;
                 break;
             }

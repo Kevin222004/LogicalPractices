@@ -32,10 +32,10 @@ public class ClimbStairsProblem {
 
     static int totalWaysToClimb(int n) {
 
-        if (n==1 || n==0) {
+        if (n == 1 || n == 0) {
             return 1;
         }
 
-        return totalWaysToClimb(n-1) + totalWaysToClimb(n-2);
+        return totalWaysToClimb(n - 1) + totalWaysToClimb(n - 2);
     }
 }

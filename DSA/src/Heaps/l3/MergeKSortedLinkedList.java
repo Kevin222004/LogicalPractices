@@ -6,7 +6,6 @@
 package Heaps.l3;
 
 import java.util.Comparator;
-import java.util.List;
 import java.util.PriorityQueue;
 
 public class MergeKSortedLinkedList {
@@ -29,7 +28,7 @@ public class MergeKSortedLinkedList {
         }
 
         // first element of ll should be inserted in queue
-        for (int i = 0; i  < lists.length; i++){
+        for (int i = 0; i < lists.length; i++) {
             if (lists[i] != null) {
                 queue.add(lists[i]);
             }
@@ -47,13 +46,13 @@ public class MergeKSortedLinkedList {
                 // temp -> first elemnt of ll
                 head = temp;
                 tail = temp;
-                if (temp.next !=null) {
+                if (temp.next != null) {
                     queue.add(temp.next);
                 }
             } else {
                 tail.next = temp;
                 tail = temp;
-                if (temp.next !=null) {
+                if (temp.next != null) {
                     queue.add(temp.next);
                 }
             }
@@ -65,7 +64,16 @@ public class MergeKSortedLinkedList {
 class ListNode {
     int val;
     ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+
+    ListNode() {
+    }
+
+    ListNode(int val) {
+        this.val = val;
+    }
+
+    ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
+    }
 }

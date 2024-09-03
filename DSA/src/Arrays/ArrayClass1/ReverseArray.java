@@ -1,6 +1,6 @@
-package Arrays.ArrayClass1;
+package DSA.src.Arrays.ArrayClass1;
 
-public class  ReverseArray {
+public class ReverseArray {
 
     public static void main(String[] args) {
         int[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1};
@@ -12,7 +12,7 @@ public class  ReverseArray {
     }
 
     public static void ReverseArray(int[] arr) {
-        for (int i=0; i< arr.length; i ++) {
+        for (int i = 0; i < arr.length; i++) {
             int j = arr.length - i - 1;
             System.out.print(arr[j] + " ");
         }
@@ -20,7 +20,7 @@ public class  ReverseArray {
 
     public static void ReverseArrayUsingSwap(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            int j = arr.length - i -1;
+            int j = arr.length - i - 1;
 
             if (i >= j) {
                 break;

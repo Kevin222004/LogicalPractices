@@ -8,7 +8,7 @@ public class ReverseInKGroups {
         print(reverseKgroup(head, 3));
     }
 
-    static Node reverseKgroup(Node head, int k){
+    static Node reverseKgroup(Node head, int k) {
         if (head == null) {
             return null;
         }
@@ -46,9 +46,9 @@ public class ReverseInKGroups {
 
     static int getlength(Node head) {
         int len = 0;
-        Node temp  =  head;
+        Node temp = head;
         while (temp != null) {
-            len = len+1;
+            len = len + 1;
             temp = temp.next;
         }
         return len;
@@ -56,7 +56,7 @@ public class ReverseInKGroups {
 
     static void print(Node head) {
         Node temp = head;
-        while (temp!=null) {
+        while (temp != null) {
             System.out.print(temp.data + " ");
             temp = temp.next;
         }
@@ -64,6 +64,7 @@ public class ReverseInKGroups {
     }
 
 }
+
 class Node {
     int data;
     Node next;
@@ -72,6 +73,7 @@ class Node {
         this.data = data;
         this.next = next;
     }
+
     public Node(int data) {
         this.data = data;
     }

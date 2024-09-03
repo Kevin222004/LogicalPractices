@@ -39,11 +39,11 @@ public class Heap {
     }
 
     private void upheap(int index) {
-        if(index == 0) {
+        if (index == 0) {
             return;
         }
         int p = parent(index);
-        if(heap.get(index).compareTo(heap.get(p)) < 0) {
+        if (heap.get(index).compareTo(heap.get(p)) < 0) {
             swap(index, p);
             upheap(p);
         }
@@ -64,20 +64,21 @@ public class Heap {
 
         return temp;
     }
+
     private void downheap(int index) {
         int min = index;
         int left = left(index);
         int right = right(index);
 
-        if(left < heap.size() && heap.get(min).compareTo(heap.get(left)) > 0) {
+        if (left < heap.size() && heap.get(min).compareTo(heap.get(left)) > 0) {
             min = left;
         }
 
-        if(right < heap.size() && heap.get(min).compareTo(heap.get(right)) > 0) {
+        if (right < heap.size() && heap.get(min).compareTo(heap.get(right)) > 0) {
             min = right;
         }
 
-        if(min != index) {
+        if (min != index) {
             swap(min, index);
             downheap(min);
         }
@@ -85,7 +86,7 @@ public class Heap {
 
     public ArrayList<Integer> heapSort() throws Exception {
         ArrayList<Integer> data = new ArrayList<>();
-        while(!heap.isEmpty()) {
+        while (!heap.isEmpty()) {
             data.add(this.remove());
         }
         return data;

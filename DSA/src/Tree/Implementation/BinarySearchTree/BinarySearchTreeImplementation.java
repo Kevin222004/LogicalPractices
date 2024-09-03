@@ -17,6 +17,7 @@ public class BinarySearchTreeImplementation {
     public boolean isEmpty() {
         return root == null;
     }
+
     public void display() {
         display(root, "Root Nodes: ");
     }

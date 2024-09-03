@@ -9,7 +9,7 @@ Method 3 - 3 pointer
 
  */
 
-package Arrays.Assign;
+package DSA.src.Arrays.Assign;
 
 public class SortColor {
     public static void main(String[] args) {
@@ -17,31 +17,28 @@ public class SortColor {
 
     }
 
-    static void sort(int[] arr) {
+    public static void sortColors(int[] nums) {
         int low = 0;
-        int high = arr.length-1;
-        int m = 0;
-
-        while (m <= high) {
-            if (arr[m] == 0) {
-                swap(arr[low], arr[m]);
+        int mid = 0;
+        int hig = nums.length-1;
+        while (mid <= hig) {
+            if (nums[mid] == 0) {
+                int temp = nums[low];
+                nums[low] =nums[mid] ;
+                nums[mid] = temp;
                 low++;
-                m++;
+                mid++;
             }
-            else if (arr[m] == 1) {
-                m++;
+            else if (nums[mid] == 1) {
+                mid++;
             }
-            else if (arr[m] ==2 ) {
-                swap(arr[m], arr[high]);
-                high--;
-                m++;
+            else {
+                int temp = nums[mid];
+                nums[mid] =nums[hig] ;
+                nums[hig] = temp;
+                hig--;
             }
         }
     }
 
-    static void swap(int i, int j ) {
-        int temp = i;
-        i = j;
-         j = temp;
-    }
 }

@@ -1,4 +1,4 @@
-package DP.l3;
+package DSA.src.DP.l3;
 
 public class SubsetProblem {
 }

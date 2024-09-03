@@ -11,25 +11,28 @@ is minimum
  */
 
 package Greedy;
-import java.util.*;
+
+import java.util.Arrays;
+
 public class choclate {
     public static void main(String[] args) {
-        int n = 8; int m = 5;
+        int n = 8;
+        int m = 5;
         int[] choclates = {3, 4, 1, 9, 56, 7, 9, 12};
-    
+
         int mini = Integer.MAX_VALUE;
-        
+
         Arrays.sort(choclates);
-        
+
         int start = 0;
-        int end = m-1;
+        int end = m - 1;
 
         while (end < choclates.length) {
             int diff = choclates[end] - choclates[start];
             mini = Math.min(mini, diff);
             start++;
             end++;
-        }        
+        }
 
         System.out.println(mini);
     }

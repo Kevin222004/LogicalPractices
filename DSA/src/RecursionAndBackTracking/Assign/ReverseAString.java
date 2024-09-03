@@ -17,6 +17,6 @@ public class ReverseAString {
         str.setCharAt(s, str.charAt(e));
         str.setCharAt(e, temp);
 
-        reverseAStringUsingRE(str, s+1, e-1);
+        reverseAStringUsingRE(str, s + 1, e - 1);
     }
 }

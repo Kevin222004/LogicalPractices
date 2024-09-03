@@ -5,14 +5,18 @@ import java.util.Stack;
 public class ReverseTheStack {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
-        stack.push(5);stack.push(4);stack.push(3);stack.push(2);stack.push(1);
+        stack.push(5);
+        stack.push(4);
+        stack.push(3);
+        stack.push(2);
+        stack.push(1);
         printStack(stack);
         reverseStack(stack);
         printStack(stack);
     }
 
     static void printStack(Stack stack) {
-        for (; !stack.isEmpty();stack.pop()) {
+        for (; !stack.isEmpty(); stack.pop()) {
             System.out.print(stack.peek() + " ");
         }
         System.out.println();

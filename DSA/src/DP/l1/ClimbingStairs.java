@@ -1,5 +1,7 @@
-package DP.l1;
-import java.util.*;
+package DSA.src.DP.l1;
+
+import java.util.Arrays;
+
 public class ClimbingStairs {
 }
 

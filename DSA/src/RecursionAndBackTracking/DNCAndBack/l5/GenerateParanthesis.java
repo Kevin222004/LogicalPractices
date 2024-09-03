@@ -31,7 +31,7 @@ class Solution {
         // include close bracket
         if (close > open) {
             output.append(')');
-            solve(list, n, open, close-1, output);
+            solve(list, n, open, close - 1, output);
             output.deleteCharAt(output.length());
         }
     }

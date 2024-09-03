@@ -20,27 +20,24 @@ public class FindTheOddOccuringElementInAnarray {
         int end = arr.length;
 
         while (start <= end) {
-            int mid = start + (end - start)/2;
+            int mid = start + (end - start) / 2;
 
             if (start == end) {
                 return arr[mid];
             }
 
             // 2 cases even and odd
-            if (mid%2==0) {
-                if (arr[mid] == arr[mid+1]) {
+            if (mid % 2 == 0) {
+                if (arr[mid] == arr[mid + 1]) {
                     start = mid + 2;
-                }
-                else {
+                } else {
                     end = mid;
                 }
-            }
-            else {
-                if (arr[mid] == arr[mid-1]) {
+            } else {
+                if (arr[mid] == arr[mid - 1]) {
                     start = mid + 1;
-                }
-                else {
-                    end = mid -1;
+                } else {
+                    end = mid - 1;
                 }
             }
         }

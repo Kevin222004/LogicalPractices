@@ -7,14 +7,15 @@ public class RemoveAllOccurencessOfSubString {
         System.out.println(removeOccurrences("daabcbaabcbc", "abc"));
     }
 
-    public static String removeOccurrences(String s, String part) {        StringBuilder str = new StringBuilder();
+    public static String removeOccurrences(String s, String part) {
+        StringBuilder str = new StringBuilder();
         int lastIndex = 0;
 
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) != part.charAt(i)) {
-                str.append(s.charAt(i)); lastIndex++;
-            }
-            else {
+                str.append(s.charAt(i));
+                lastIndex++;
+            } else {
 
             }
         }

@@ -24,18 +24,19 @@ public class RemoveRedundantBracket {
         String expression = "((a+b))";
         List<Character> operator = new ArrayList<>();
         boolean result = false;
-        operator.add('+');operator.add('*');operator.add('/');operator.add('-');
+        operator.add('+');
+        operator.add('*');
+        operator.add('/');
+        operator.add('-');
         for (int i = 0; i < expression.length(); i++) {
             if (expression.charAt(i) == '('
                     || operator.contains(expression.charAt(i))) {
                 stack.push(expression.charAt(i));
-            }
-            else if (expression.charAt(i) == ')') {
+            } else if (expression.charAt(i) == ')') {
                 if (stack.peek() == '(') {
                     result = true;
                     break;
-                }
-                else {
+                } else {
                     while (stack.peek() != '(') {
                         stack.pop();
                     }

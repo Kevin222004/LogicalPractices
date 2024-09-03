@@ -1,7 +1,6 @@
 // leetcode 632
 package Heaps.l3;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
@@ -41,12 +40,11 @@ public class SmallestRangeInKList {
             }
 
             // check for new element in same list
-            if (topCol+1 < nums.get(topRow).size()) {
-                maxi = Math.max(maxi, nums.get(topRow).get(topCol+1));
-                Node nodenew = new Node(nums.get(topRow).get(topCol+1), topRow, topCol+1);
+            if (topCol + 1 < nums.get(topRow).size()) {
+                maxi = Math.max(maxi, nums.get(topRow).get(topCol + 1));
+                Node nodenew = new Node(nums.get(topRow).get(topCol + 1), topRow, topCol + 1);
                 heap.add(nodenew);
-            }
-            else {
+            } else {
                 // their is no elemnt in same list
                 break;
             }

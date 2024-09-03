@@ -4,7 +4,7 @@ Leetcode 375
 
 */
 
-package DP.l5;
+package DSA.src.DP.l5;
 
 import java.util.Arrays;
 
@@ -65,7 +65,8 @@ class Solution {
                 } else {
                     int ans = Integer.MAX_VALUE;
                     for (int i = start; i <= end; i++) {
-                        ans = Math.min(ans, i + Math.max(dp[start][i - 1], dp[i + 1][end]));}
+                        ans = Math.min(ans, i + Math.max(dp[start][i - 1], dp[i + 1][end]));
+                    }
                     dp[start][end] = ans;
                 }
             }

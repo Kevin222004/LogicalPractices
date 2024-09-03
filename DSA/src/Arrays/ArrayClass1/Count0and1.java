@@ -1,4 +1,4 @@
-package Arrays.ArrayClass1;
+package DSA.src.Arrays.ArrayClass1;
 
 public class Count0and1 {
     public static void main(String[] args) {
@@ -17,12 +17,12 @@ public class Count0and1 {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == 0) {
                 zero++;
-            }
-            else {
+            } else {
                 one++;
             }
         }
-        result[0] = zero; result[1] = one;
+        result[0] = zero;
+        result[1] = one;
         return result;
     }
 }

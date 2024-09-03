@@ -16,15 +16,15 @@ public class MoveAllNegativeNumberToLeft {
         System.out.println(Arrays.toString(arr));
     }
 
-    static void NNumLeft(int [] arr) {
+    static void NNumLeft(int[] arr) {
         int l = 0;
-        int h = arr.length-1;
+        int h = arr.length - 1;
         while (l <= h) {
             if (arr[l] < 0) {
                 l++;
             } else if (arr[h] > 0) {
                 h--;
-            }else {
+            } else {
                 int temp = arr[l];
                 arr[l] = arr[h];
                 arr[h] = temp;

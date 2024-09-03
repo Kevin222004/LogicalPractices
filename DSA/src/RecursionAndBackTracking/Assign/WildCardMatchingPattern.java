@@ -15,7 +15,7 @@ public class WildCardMatchingPattern {
 
     class Solution {
         public boolean isMatch(String s, String p) {
-            return solveUsingRecursion(s, p, s.length()-1, p.length()-1);
+            return solveUsingRecursion(s, p, s.length() - 1, p.length() - 1);
         }
 
         boolean solveUsingRecursion(String str, String pattern, int i, int j) {
@@ -37,12 +37,10 @@ public class WildCardMatchingPattern {
             }
 
             if (str.charAt(i) == pattern.charAt(j) || pattern.charAt(j) == '?') {
-                return solveUsingRecursion(str, pattern, i-1, j-1);
-            }
-            else if (pattern.charAt(j) == '*') {
-                return solveUsingRecursion(str, pattern, i-1, j) ||solveUsingRecursion(str, pattern, i, j-1);
-            }
-            else {
+                return solveUsingRecursion(str, pattern, i - 1, j - 1);
+            } else if (pattern.charAt(j) == '*') {
+                return solveUsingRecursion(str, pattern, i - 1, j) || solveUsingRecursion(str, pattern, i, j - 1);
+            } else {
                 return false;
             }
         }

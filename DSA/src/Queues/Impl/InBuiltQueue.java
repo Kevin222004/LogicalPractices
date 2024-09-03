@@ -1,8 +1,10 @@
 // InBuilt Queue
 
-package Queues.Impl;
+package DSA.src.Queues.Impl;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Queue;
 
 public class InBuiltQueue {
     public static void main(String[] args) {
@@ -19,7 +21,11 @@ public class InBuiltQueue {
 
         Deque<Integer> deque = new ArrayDeque<>();
 
-        deque.add(1);deque.add(4);deque.add(3);deque.add(2);
+        deque.add(1);
+        deque.add(4);
+        deque.add(3);
+        deque.add(2);
         System.out.println(deque);
+
     }
 }

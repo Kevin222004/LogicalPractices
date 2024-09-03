@@ -22,7 +22,7 @@ public class TotalOccurences {
         while (start <= end) {
             int mid = start + ((end - start) / 2);
 
-            if(arr[start] == num || arr[mid] == num) {
+            if (arr[start] == num || arr[mid] == num) {
                 ans++;
             }
             if (arr[mid] == num) {

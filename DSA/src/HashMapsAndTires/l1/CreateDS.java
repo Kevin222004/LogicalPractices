@@ -6,8 +6,6 @@ O(1) time
  */
 package HashMapsAndTires.l1;
 
-import java.util.HashMap;
-
 public class CreateDS {
     public static void main(String[] args) {
 //        HashMap<Integer, String> name = new HashMap<>();

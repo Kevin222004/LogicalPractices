@@ -69,7 +69,7 @@ public class L1 {
             return 1;
         }
 
-        return n * factorial(n-1);
+        return n * factorial(n - 1);
     }
 
     static void printCountingRevrese(int n) {
@@ -78,7 +78,7 @@ public class L1 {
             return;
         }
         System.out.println(n);
-        printCountingRevrese(n-1);
+        printCountingRevrese(n - 1);
     }
 
     static void printCounting(int n) {
@@ -86,16 +86,18 @@ public class L1 {
         if (n == 0) {
             return;
         }
-        printCounting(n-1);
+        printCounting(n - 1);
         System.out.println(n);
     }
 
     static int fibonacci(int n) {
-        if (n == 1 ) {
+        if (n == 1) {
             return 0;
         }
-        if (n==2) {return 1;}
-        int ans = fibonacci(n-1) + fibonacci(n-2);
+        if (n == 2) {
+            return 1;
+        }
+        int ans = fibonacci(n - 1) + fibonacci(n - 2);
         return ans;
     }
 }

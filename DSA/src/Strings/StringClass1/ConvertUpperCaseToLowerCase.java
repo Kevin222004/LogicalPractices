@@ -8,7 +8,7 @@ public class ConvertUpperCaseToLowerCase {
     static String convertUpperCaseToLowerCase(String str) {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {
-            stringBuilder.append((char)(str.charAt(i)-'A' + 'a'));
+            stringBuilder.append((char) (str.charAt(i) - 'A' + 'a'));
         }
         return stringBuilder.toString();
     }

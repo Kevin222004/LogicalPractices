@@ -33,8 +33,7 @@ public class BinaryTree {
         }
         if (arr[index] != -1) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
@@ -46,8 +45,7 @@ public class BinaryTree {
             node.left = new Node(value);
             index++;
             populate(node.left);
-        }
-        else {
+        } else {
             index++;
         }
         boolean right = checkNode();
@@ -56,8 +54,7 @@ public class BinaryTree {
             node.right = new Node(value);
             index++;
             populate(node.right);
-        }
-        else {
+        } else {
             index++;
         }
     }
@@ -75,7 +72,7 @@ public class BinaryTree {
         display(node.right, indent);
     }
 
-    
+
     private class Node {
         int value;
         Node left;
@@ -118,7 +115,7 @@ public class BinaryTree {
         int leftHeight = heightOfTree(root.left);
         int rightHeight = heightOfTree(root.right);
         int diff = Math.abs(leftHeight - rightHeight);
-        boolean ans1 = (diff<=1);
+        boolean ans1 = (diff <= 1);
 
         // recursion
         boolean leftAns = isBalanced(root.left);
@@ -166,9 +163,9 @@ public class BinaryTree {
         boolean left = kthAncestor(root.left, k, p);
         boolean right = kthAncestor(root.right, k, p);
 
-        if ((left || right )&& k > 0) {
+        if ((left || right) && k > 0) {
             k--;
-         }
+        }
         if (k == 0) {
             System.out.println(root.value);
             k = -1;

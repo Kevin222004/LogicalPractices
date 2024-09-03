@@ -17,7 +17,7 @@ public class QuickSort {
     public static void main(String[] args) {
         int[] arr = {5, 5, 89, 4, 3, 2, 1};
         System.out.println(Arrays.toString(arr));
-        System.out.println(Arrays.toString(quickSort(arr, 0, arr.length-1)));
+        System.out.println(Arrays.toString(quickSort(arr, 0, arr.length - 1)));
     }
 
     public static int[] quickSort(int[] arr, int s, int e) {
@@ -31,9 +31,9 @@ public class QuickSort {
 
         // recursive call
         // pivot -> left
-        int[] left = quickSort(arr, s, p-1);
+        int[] left = quickSort(arr, s, p - 1);
         // pivot -> right
-        int[] right = quickSort(arr, p+1, e);
+        int[] right = quickSort(arr, p + 1, e);
 
         return arr;
     }
@@ -45,7 +45,7 @@ public class QuickSort {
 
         // step 2 :- find right pos for elemtn to place it here
         int count = 0;
-        for (int i = s+1; i <= e; i++) {
+        for (int i = s + 1; i <= e; i++) {
             if (arr[i] <= pivotElement) {
                 count++;
             }

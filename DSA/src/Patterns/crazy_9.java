@@ -17,12 +17,12 @@ public class crazy_9 {
     }
 
     private static void print(int n) {
-        for (int i = n; i >0; i--) {
-            for (int space = 1; space <= (n-i); space++) {
+        for (int i = n; i > 0; i--) {
+            for (int space = 1; space <= (n - i); space++) {
                 System.out.print(" ");
             }
 
-            for (int k = 1;k < (2*i);k++) {
+            for (int k = 1; k < (2 * i); k++) {
                 System.out.print("*");
             }
             System.out.println();

@@ -28,12 +28,11 @@ public class AdjacencyList {
         g.printWeightedAdjacencyList();
     */
 
-      // directed weighted graph
+        // directed weighted graph
         g.addEdgeWithWeight(0, 1, 5, false);
         g.addEdgeWithWeight(1, 2, 8, false);
         g.addEdgeWithWeight(0, 2, 6, false);
         g.printWeightedAdjacencyList();
-
 
 
     }
@@ -41,7 +40,7 @@ public class AdjacencyList {
 
 class Graph {
 
-/*---------------------unweighted directed and undirected graph-----------------------------------------*/
+    /*---------------------unweighted directed and undirected graph-----------------------------------------*/
 
     // unweighted directed and undirected graph
     Map<Integer, List<Integer>> adjacencyList = new HashMap<>();
@@ -65,7 +64,7 @@ class Graph {
         }
     }
 
-/*-------------------------weighted directed and undirected graph-----------------------------------------*/
+    /*-------------------------weighted directed and undirected graph-----------------------------------------*/
     Map<Integer, List<List<Integer>>> WeightedAdjacencyList = new HashMap<>();
 
     void addEdgeWithWeight(int u, int v, int weight, boolean directed) {

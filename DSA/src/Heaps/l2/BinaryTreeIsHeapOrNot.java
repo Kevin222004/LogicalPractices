@@ -14,7 +14,7 @@ public class BinaryTreeIsHeapOrNot {
         if (root.left == null && root.right == null) {
             // leaf Node
             Pair<Boolean, Integer> pair = new Pair<>(true, root.data);
-            return  pair;
+            return pair;
         }
 
         Pair<Boolean, Integer> leftAns = solve(root.left);
@@ -24,8 +24,7 @@ public class BinaryTreeIsHeapOrNot {
                 && root.data > leftAns.getSecond()
                 && root.data > rightAns.getSecond()) {
             return new Pair<>(true, root.data);
-        }
-        else {
+        } else {
             return new Pair<>(false, root.data);
         }
     }
@@ -35,6 +34,7 @@ class Node {
     int data;
     Node left;
     Node right;
+
     public Node(int data) {
         this.data = data;
     }

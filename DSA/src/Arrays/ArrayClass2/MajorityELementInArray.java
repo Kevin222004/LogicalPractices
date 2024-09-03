@@ -1,4 +1,4 @@
-package Arrays.ArrayClass2;
+package DSA.src.Arrays.ArrayClass2;
 
 public class MajorityELementInArray {
 }

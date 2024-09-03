@@ -8,7 +8,7 @@
 
 */
 
-package Patterns;
+package DSA.src.Patterns;
 
 public class crazy_3 {
     public static void main(String[] args) {

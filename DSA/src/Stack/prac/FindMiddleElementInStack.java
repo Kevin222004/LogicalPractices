@@ -12,11 +12,15 @@ public class FindMiddleElementInStack {
     public static void main(String[] args) {
 
         Stack<Integer> stack = new Stack<>();
-        stack.push(10); stack.push(9);
-        stack.push(8); stack.push(101);
+        stack.push(10);
+        stack.push(9);
+        stack.push(8);
+        stack.push(101);
         stack.push(91);
-        stack.push(7); stack.push(6);
-        stack.push(5); stack.push(4);
+        stack.push(7);
+        stack.push(6);
+        stack.push(5);
+        stack.push(4);
 
         middleAtStack(stack, stack.capacity());
 
@@ -27,7 +31,7 @@ public class FindMiddleElementInStack {
     }
 
     public static void middleAtStack(Stack<Integer> stack, int size) {
-        if (stack.size() == size/2 ) {
+        if (stack.size() == size / 2) {
             System.out.println(stack.peek());
             return;
         }

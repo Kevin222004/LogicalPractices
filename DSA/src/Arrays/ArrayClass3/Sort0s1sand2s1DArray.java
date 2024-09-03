@@ -37,11 +37,9 @@ public class Sort0s1sand2s1DArray {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == 0) {
                 countOfZero++;
-            }
-            else if (arr[i] == 1) {
+            } else if (arr[i] == 1) {
                 countOfOne++;
-            }
-            else {
+            } else {
                 countOfTwo++;
             }
         }
@@ -51,12 +49,10 @@ public class Sort0s1sand2s1DArray {
             if (countOfZero != 0) {
                 ans[i] = 0;
                 countOfZero--;
-            }
-            else if (countOfOne != 0) {
+            } else if (countOfOne != 0) {
                 ans[i] = 1;
                 countOfOne--;
-            }
-            else {
+            } else {
                 ans[i] = 2;
                 countOfTwo--;
             }
@@ -68,21 +64,19 @@ public class Sort0s1sand2s1DArray {
     public static void sortColors(int[] nums) {
         int low = 0;
         int mid = 0;
-        int hig = nums.length-1;
+        int hig = nums.length - 1;
         while (mid <= hig) {
             if (nums[mid] == 0) {
                 int temp = nums[low];
-                nums[low] =nums[mid] ;
+                nums[low] = nums[mid];
                 nums[mid] = temp;
                 low++;
                 mid++;
-            }
-            else if (nums[mid] == 1) {
+            } else if (nums[mid] == 1) {
                 mid++;
-            }
-            else {
+            } else {
                 int temp = nums[mid];
-                nums[mid] =nums[hig] ;
+                nums[mid] = nums[hig];
                 nums[hig] = temp;
                 hig--;
             }

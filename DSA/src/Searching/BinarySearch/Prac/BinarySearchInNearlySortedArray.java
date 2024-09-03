@@ -29,22 +29,18 @@ public class BinarySearchInNearlySortedArray {
         int end = arr.length;
 
         while (start < end) {
-            int mid = start + (end - start)/2;
+            int mid = start + (end - start) / 2;
 
             if (arr[mid] == target) {
                 return mid;
-            }
-            else if (mid-1>=0&&arr[mid - 1] == target) {
-                return mid-1;
-            }
-            else if (mid+1<arr.length&&arr[mid + 1] == target) {
-                return mid+1;
-            }
-            else if (arr[mid] < target) {
+            } else if (mid - 1 >= 0 && arr[mid - 1] == target) {
+                return mid - 1;
+            } else if (mid + 1 < arr.length && arr[mid + 1] == target) {
+                return mid + 1;
+            } else if (arr[mid] < target) {
                 start = mid + 2;
-            }
-            else {
-                end = mid -2;
+            } else {
+                end = mid - 2;
             }
         }
         return -1;

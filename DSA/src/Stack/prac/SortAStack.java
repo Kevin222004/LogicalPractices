@@ -15,7 +15,11 @@ import java.util.Stack;
 public class SortAStack {
     public static void main(String[] args) {
         Stack<Integer> ip = new Stack<>();
-        ip.add(7);ip.add(11);ip.add(3);ip.add(5);ip.add(9);
+        ip.add(7);
+        ip.add(11);
+        ip.add(3);
+        ip.add(5);
+        ip.add(9);
         System.out.println(ip);
         sortStack(ip);
         System.out.println(ip);

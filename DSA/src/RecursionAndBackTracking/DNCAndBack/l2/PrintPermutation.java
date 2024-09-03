@@ -25,7 +25,7 @@ public class PrintPermutation {
             str[j] = temp;
 
             // recursion
-            printpermutation(str, i+1);
+            printpermutation(str, i + 1);
 
             // backtracking logic to re create the original string
             char temp2 = str[i];

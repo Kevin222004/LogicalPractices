@@ -26,7 +26,7 @@ public class Divide2NumberUsingBinarySearch {
         int end = divident;
 
         while (start <= end) {
-            int mid = start + ((end - start)/2);
+            int mid = start + ((end - start) / 2);
 
             int formula = divisor * mid;
 
@@ -34,10 +34,9 @@ public class Divide2NumberUsingBinarySearch {
                 ans = mid;
                 break;
             }
-            if  (formula > divident) {
+            if (formula > divident) {
                 end = mid - 1;
-            }
-            else {
+            } else {
                 ans = mid;
                 start = end + 1;
             }

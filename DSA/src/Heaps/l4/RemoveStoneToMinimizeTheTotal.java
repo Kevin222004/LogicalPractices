@@ -2,8 +2,6 @@ package Heaps.l4;
 
 import java.util.PriorityQueue;
 
-import static java.lang.Math.floor;
-
 public class RemoveStoneToMinimizeTheTotal {
     public static void main(String[] args) {
 
@@ -12,14 +10,14 @@ public class RemoveStoneToMinimizeTheTotal {
     class SolutionRemoveStoneToMinimizeTheTotal {
         public int minStoneSum(int[] piles, int k) {
             PriorityQueue<Integer> maxHeap = new PriorityQueue<>();
-            for (int i =0; i < piles.length; i++) {
+            for (int i = 0; i < piles.length; i++) {
                 maxHeap.add(piles[i]);
             }
 
-            while ( k != 0) {
+            while (k != 0) {
                 int maxElement = maxHeap.poll();
                 maxHeap.poll();
-                maxElement = maxElement-( (int) Math.floor(maxElement / 2));
+                maxElement = maxElement - ((int) Math.floor(maxElement / 2));
                 maxHeap.add(maxElement);
             }
 
@@ -27,7 +25,7 @@ public class RemoveStoneToMinimizeTheTotal {
             while (!maxHeap.isEmpty()) {
                 int temp = maxHeap.peek();
                 maxHeap.poll();
-                sum+=temp;
+                sum += temp;
             }
             return sum;
         }

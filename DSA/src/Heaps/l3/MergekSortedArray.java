@@ -16,7 +16,7 @@ public class MergekSortedArray {
 
     static List<Integer> mergeKsortedArray(List<List<Integer>> KsortedArray) {
         PriorityQueue<Info> heap = new PriorityQueue<>(Info::compareTo);
-        for (int i =0; i < KsortedArray.size(); i++) {
+        for (int i = 0; i < KsortedArray.size(); i++) {
             heap.add(new Info(KsortedArray.get(i).get(0), i, 0));
         }
 
@@ -26,8 +26,8 @@ public class MergekSortedArray {
             Info node = heap.peek();
             ans.add(node.value);
             heap.poll();
-            if (node.col+1 < KsortedArray.get(node.row).size()) {
-                Info addVal = new Info(KsortedArray.get(node.row).get(node.col + 1), node.row, node.col+1);
+            if (node.col + 1 < KsortedArray.get(node.row).size()) {
+                Info addVal = new Info(KsortedArray.get(node.row).get(node.col + 1), node.row, node.col + 1);
                 heap.add(addVal);
             }
         }

@@ -5,12 +5,15 @@ https://leetcode.com/problems/coin-change/description/
 */
 
 package DP.l2;
-import java.util.*;
+
+import java.util.Arrays;
+
 public class CoinChange {
     public static void main(String[] args) {
 
     }
 }
+
 class Solution {
 
     public int coinChange(int[] coins, int amount) {
@@ -36,8 +39,7 @@ class Solution {
         int ans = MinCoinBottomUP(coins, amount);
         if (ans == Integer.MAX_VALUE) {
             return -1;
-        }
-        else {
+        } else {
             return ans;
         }
     }
@@ -54,7 +56,7 @@ class Solution {
 
         int minAns = Integer.MAX_VALUE;
         for (int i = 0; i < coins.length; i++) {
-            int ans = MinCoin(coins, amount-coins[i]);
+            int ans = MinCoin(coins, amount - coins[i]);
             if (ans != Integer.MAX_VALUE) {
                 minAns = Math.min(minAns, ans + 1);
             }
@@ -76,7 +78,7 @@ class Solution {
         }
         int minAns = Integer.MAX_VALUE;
         for (int i = 0; i < coins.length; i++) {
-            int ans = MinCoinTopDown(coins, amount-coins[i], dp);
+            int ans = MinCoinTopDown(coins, amount - coins[i], dp);
             if (ans != Integer.MAX_VALUE) {
                 minAns = Math.min(minAns, ans + 1);
             }
@@ -88,14 +90,14 @@ class Solution {
     /*------------------------------BottomUp-------------------------------------------------*/
 
     int MinCoinBottomUP(int[] coins, int amount) {
-        int[] dp = new int[amount+1];
+        int[] dp = new int[amount + 1];
         Arrays.fill(dp, Integer.MAX_VALUE);
         dp[0] = 0;
         for (int i = 1; i <= amount; i++) {
             for (int j = 0; j < coins.length; j++) {
                 if (i - coins[j] >= 0 && dp[i - coins[j]] != Integer.MAX_VALUE) {
                     int ans = dp[i - coins[j]];
-                    dp[i] = Math.min(dp[i],1 + ans);
+                    dp[i] = Math.min(dp[i], 1 + ans);
                 }
             }
         }

@@ -20,15 +20,17 @@ public class AdjacencyMatrix {
         // take u, v as input and store it in matrix
         for (int i = 0; i < edges; i++) {
             System.out.println("Enter the vertices which have edges");
-            System.out.print("Enter the v1: ");int u = sc.nextInt();
-            System.out.print("Enter the v2: ");int v = sc.nextInt();
+            System.out.print("Enter the v1: ");
+            int u = sc.nextInt();
+            System.out.print("Enter the v2: ");
+            int v = sc.nextInt();
             AdjacencyMatrix[u][v] = 1;
         }
         System.out.println();
         // print graph or adjacency matric
         System.out.println("Graph");
         for (int i = 0; i < nodes; i++) {
-            for (int j = 0; j< nodes; j++) {
+            for (int j = 0; j < nodes; j++) {
                 System.out.print(AdjacencyMatrix[i][j] + " ");
             }
             System.out.println();

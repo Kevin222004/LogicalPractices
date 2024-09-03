@@ -19,7 +19,7 @@ public class WavePrint {
                 {1, 2, 3, 4},
                 {5, 6, 7, 8},
                 {9, 10, 11, 12},
-                {1,3, 4}
+                {1, 3, 4}
         };
         printWave(arr);
     }
@@ -33,11 +33,10 @@ public class WavePrint {
                 for (int i = 0; i < m; i++) {
                     System.out.print(mat[i][startCol] + " ");
                 }
-            }
-            else {
+            } else {
                 // odd no if col -> Bottom to top
-                for (int i = m-1; i>=0; i--) {
-                    System.out.print(mat[i][startCol] + " " );
+                for (int i = m - 1; i >= 0; i--) {
+                    System.out.print(mat[i][startCol] + " ");
                 }
             }
             System.out.println();

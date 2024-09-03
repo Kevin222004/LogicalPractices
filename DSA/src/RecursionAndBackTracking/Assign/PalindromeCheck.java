@@ -12,9 +12,8 @@ public class PalindromeCheck {
             return true;
         }
         if (str.charAt(s) == str.charAt(e)) {
-            return Palindrom(str, s + 1, e -1);
-        }
-        else {
+            return Palindrom(str, s + 1, e - 1);
+        } else {
             return false;
         }
     }

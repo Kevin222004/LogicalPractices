@@ -8,8 +8,8 @@ public class HouseRobberProblem {
             return 0;
         }
 
-        int inclusion = roberryWithRecursion(nums, index+2);
-        int exclusion = roberryWithRecursion(nums, index+1);
+        int inclusion = roberryWithRecursion(nums, index + 2);
+        int exclusion = roberryWithRecursion(nums, index + 1);
 
         return Math.max(inclusion, exclusion);
     }

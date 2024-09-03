@@ -9,14 +9,15 @@
  */
 package Patterns;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class crazy_16 {
     public static void main(String[] args) {
 //        System.out.println(printPascal(5));
         List<List<Integer>> ans = printPascal(5);
         for (int i = 0; i < ans.size(); i++) {
-            int spaceLogic = ans.size()-i;
+            int spaceLogic = ans.size() - i;
             for (int space = 0; space < spaceLogic; space++) {
                 System.out.print(" ");
             }

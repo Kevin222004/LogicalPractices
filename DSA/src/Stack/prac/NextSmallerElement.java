@@ -20,7 +20,7 @@ import java.util.Stack;
 public class NextSmallerElement {
 
     public static void main(String[] args) {
-       int[] array = {2, 1, 4, 3};
+        int[] array = {2, 1, 4, 3};
         System.out.println(Arrays.toString(NextSmallerElement(array)));
     }
 
@@ -28,9 +28,9 @@ public class NextSmallerElement {
         Stack<Integer> stack = new Stack<>();
         int[] ans = new int[arr.length];
         stack.add(-1);
-        for (int i = ans.length-1;i>=0; i-- ) {
+        for (int i = ans.length - 1; i >= 0; i--) {
             int curElement = arr[i];
-            while(stack.peek() >= curElement) {
+            while (stack.peek() >= curElement) {
                 stack.pop();
             }
             ans[i] = stack.peek();

@@ -17,9 +17,9 @@ public class CommonElementsIn3SortedArray {
         int[] arr2 = {6, 7, 20, 80, 100};
         int[] arr3 = {3, 4, 15, 20, 30, 70, 80, 120};
         */
-        int[] arr1 = {3,3,3};
-        int[] arr2 = {3,3,3};
-        int[] arr3 = {3,3,3};
+        int[] arr1 = {3, 3, 3};
+        int[] arr2 = {3, 3, 3};
+        int[] arr3 = {3, 3, 3};
 
         System.out.println(commonElement(arr1, arr2, arr3));
 
@@ -34,13 +34,14 @@ public class CommonElementsIn3SortedArray {
                 if (!list.contains(arr1[i])) {
                     list.add(arr1[i]);
                 }
-                i++;j++;k++;
-            }
-            else if (arr1[i] < arr2[j]) {
                 i++;
-            }else if (arr2[j] < arr3[k]) {
                 j++;
-            }else {
+                k++;
+            } else if (arr1[i] < arr2[j]) {
+                i++;
+            } else if (arr2[j] < arr3[k]) {
+                j++;
+            } else {
                 k++;
             }
         }

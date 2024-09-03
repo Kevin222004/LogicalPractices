@@ -12,7 +12,9 @@ package RecursionAndBackTracking.l4;
 public class MaxSumOfNonAdjacentElement {
     public static void main(String[] args) {
         int[] arry = {2, 1, 4, 9};
-        int i = 0; int sum =0; int maxi =Integer.MIN_VALUE;
+        int i = 0;
+        int sum = 0;
+        int maxi = Integer.MIN_VALUE;
         System.out.println(maxSumOfNonAdjElem(arry, sum, maxi, i));
 
     }
@@ -23,9 +25,9 @@ public class MaxSumOfNonAdjacentElement {
         }
 
         // include
-        int inc = maxSumOfNonAdjElem(arr, sum+arr[i], maxi, i+2);
+        int inc = maxSumOfNonAdjElem(arr, sum + arr[i], maxi, i + 2);
         // exclude
-        int exc = maxSumOfNonAdjElem(arr, sum, maxi, i+1);
+        int exc = maxSumOfNonAdjElem(arr, sum, maxi, i + 1);
         return Math.max(inc, exc);
     }
 }

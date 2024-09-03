@@ -9,7 +9,7 @@ public class ConvertLowerCaseToUpperCase {
     static String convertToUpperCase(String str) {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {
-            stringBuilder.append((char) (str.charAt(i)-'a'+'A'));
+            stringBuilder.append((char) (str.charAt(i) - 'a' + 'A'));
         }
         return stringBuilder.toString();
     }

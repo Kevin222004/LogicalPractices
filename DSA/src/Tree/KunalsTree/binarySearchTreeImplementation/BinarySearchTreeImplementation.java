@@ -17,6 +17,7 @@ public class BinarySearchTreeImplementation {
     public boolean isEmpty() {
         return root == null;
     }
+
     public void display() {
         display(root, "Root Nodes: ");
     }
@@ -34,7 +35,7 @@ public class BinarySearchTreeImplementation {
         Scanner sc = new Scanner(System.in);
         int data = sc.nextInt();
         Node root = new Node(data);
-        this.root =root;
+        this.root = root;
         while (data != -1) {
             root = insertIntoBst(root, data);
             data = sc.nextInt();
@@ -50,7 +51,7 @@ public class BinarySearchTreeImplementation {
         if (node.value > data) {
             node.left = insertIntoBst(node.left, data);
             return node.left;
-        }else {
+        } else {
             node.right = insertIntoBst(node.right, data);
             return node.right;
         }

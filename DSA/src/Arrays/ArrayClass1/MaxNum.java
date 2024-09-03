@@ -1,4 +1,4 @@
-package Arrays.ArrayClass1;
+package DSA.src.Arrays.ArrayClass1;
 
 public class MaxNum {
     public static void main(String[] args) {
@@ -8,7 +8,7 @@ public class MaxNum {
 
     public static int maxNum(int[] arr) {
         int val = Integer.MIN_VALUE;
-        for (int i = 0; i < arr.length;i++) {
+        for (int i = 0; i < arr.length; i++) {
             if (arr[i] > val) {
                 val = arr[i];
             }
@@ -16,9 +16,9 @@ public class MaxNum {
         return val;
     }
 
-    public static  int minNum(int[] arr) {
+    public static int minNum(int[] arr) {
         int val = Integer.MAX_VALUE;
-        for (int i = 0; i < arr.length;i++) {
+        for (int i = 0; i < arr.length; i++) {
             if (arr[i] < val) {
                 val = arr[i];
             }

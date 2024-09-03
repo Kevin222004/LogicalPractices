@@ -75,8 +75,8 @@ public class Sudkou {
     }
 
     private static void display(int[][] board) {
-        for(int[] row : board) {
-            for(int num : row) {
+        for (int[] row : board) {
+            for (int num : row) {
                 System.out.print(num + " ");
             }
             System.out.println();
@@ -101,7 +101,7 @@ public class Sudkou {
             }
         }
 
-        int sqrt = (int)(Math.sqrt(board.length));
+        int sqrt = (int) (Math.sqrt(board.length));
         int rowStart = row - row % sqrt;
         int colStart = col - col % sqrt;
 

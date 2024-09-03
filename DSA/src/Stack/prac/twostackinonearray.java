@@ -30,7 +30,8 @@ public class twostackinonearray {
 //        stack.printStack1();
 //        System.out.println();
         stack.push2(4);
-        stack.push2(3);stack.push2(2);
+        stack.push2(3);
+        stack.push2(2);
         stack.push2(1);
         stack.printStack2();
         System.out.println();
@@ -108,7 +109,7 @@ class cusStack {
 
     public static void printFullStack() {
         System.out.println("=========");
-        for(int d : data) {
+        for (int d : data) {
             System.out.print(d + " ");
         }
     }

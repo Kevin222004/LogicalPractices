@@ -1,6 +1,6 @@
 package LinkedList.Impl;
 
-public class  SinglyLinkedListImplementation {
+public class SinglyLinkedListImplementation {
     public static void main(String[] args) {
         SinglyLinkedList ll = new SinglyLinkedList();
         ll.insertAtLast(1);
@@ -92,7 +92,7 @@ class SinglyLinkedList {
         }
 
         Node tempNode = Head;
-        for (int i = 1; i < size-2; i++) {
+        for (int i = 1; i < size - 2; i++) {
             tempNode = tempNode.nextNode;
         }
 
@@ -136,7 +136,7 @@ class SinglyLinkedList {
     /*----------------------------printing finshed--------------------------------*/
 
     /*-------------------------Node--------------------------------------------*/
-     private static class Node {
+    private static class Node {
         private final int value;
         private Node nextNode;
 

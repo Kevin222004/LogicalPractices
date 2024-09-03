@@ -19,7 +19,7 @@ public class RowSumPrint {
     static List<Integer> rowSum(int[][] arr) {
         List<Integer> ans = new ArrayList<>();
 
-        for (int i = 0; i< arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             int sum = 0;
             for (int j : arr[i]) {
                 sum = j + sum;

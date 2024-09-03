@@ -19,7 +19,7 @@ public class colSumPrint {
     static List<Integer> colSum(int[][] arr) {
         List<Integer> ans = new ArrayList<>();
 
-        for (int row = 0; row< arr.length; row++) {
+        for (int row = 0; row < arr.length; row++) {
             int sum = 0;
             for (int col = 0; col < arr[row].length; col++) {
                 sum = arr[col][row] + sum;

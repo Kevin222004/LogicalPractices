@@ -34,7 +34,7 @@ public class BuysAndSellStock {
             int finala = Integer.MIN_VALUE;
 
             for (int i = 0; i < prices.length - 1; i++) {
-                finala = Math.max(finala,  method(prices, i, i + 1, ans));
+                finala = Math.max(finala, method(prices, i, i + 1, ans));
             }
             if (finala < 0) {
                 return 0;

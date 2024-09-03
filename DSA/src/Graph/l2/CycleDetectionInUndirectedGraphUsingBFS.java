@@ -11,7 +11,7 @@ public class CycleDetectionInUndirectedGraphUsingBFS {
         Graph g = new Graph();
         g.addEdge(0, 1, false);
         g.addEdge(1, 2, false);
-        g.addEdge(0,2, false);
+        g.addEdge(0, 2, false);
         int n = 3;
         boolean ans = false;
         for (int i = 0; i < n; i++) {
@@ -25,8 +25,7 @@ public class CycleDetectionInUndirectedGraphUsingBFS {
 
         if (ans) {
             System.out.println("Cycle is present");
-        }
-        else {
+        } else {
             System.out.println("Cycle is not present");
         }
 

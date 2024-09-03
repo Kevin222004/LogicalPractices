@@ -22,8 +22,7 @@ public class BinaryTree {
     private boolean checkNode() {
         if (arr[index] != -1) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
@@ -35,8 +34,7 @@ public class BinaryTree {
             node.left = new Node(value);
             index++;
             populate(node.left);
-        }
-        else {
+        } else {
             index++;
         }
         boolean right = checkNode();
@@ -45,8 +43,7 @@ public class BinaryTree {
             node.right = new Node(value);
             index++;
             populate(node.right);
-        }
-        else {
+        } else {
             index++;
         }
     }

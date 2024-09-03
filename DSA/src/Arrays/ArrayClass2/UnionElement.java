@@ -5,7 +5,7 @@ Union of 2 Array
 two array as input and so union means put all the element in ans array
 
 */
-package Arrays.ArrayClass2;
+package DSA.src.Arrays.ArrayClass2;
 
 import java.util.ArrayList;
 import java.util.List;

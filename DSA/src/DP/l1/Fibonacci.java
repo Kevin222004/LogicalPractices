@@ -6,7 +6,6 @@ https://leetcode.com/problems/fibonacci-number/description/
 
 package DP.l1;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Fibonacci {
@@ -16,7 +15,7 @@ class SolutionFib {
 
     public int fib(int n) {
 //        int ans = recursiveSolve(n);
-        int[] dpArray = new int[n+1];
+        int[] dpArray = new int[n + 1];
         Arrays.fill(dpArray, -1);
         int ans = topDown(n, dpArray);
         return ans;
@@ -46,7 +45,7 @@ class SolutionFib {
         }
 
         // step 2 replace ans with dp[n]
-        dpArray[n] = topDown(n-1, dpArray) + topDown(n-2, dpArray);
+        dpArray[n] = topDown(n - 1, dpArray) + topDown(n - 2, dpArray);
         return dpArray[n];
     }
 
@@ -68,7 +67,7 @@ class SolutionFib {
 
         // step 3
         for (int i = 2; i <= n; i++) {
-            dpArray[i] = dpArray[i-1] + dpArray[i-2];
+            dpArray[i] = dpArray[i - 1] + dpArray[i - 2];
         }
 
         return dpArray[n];
@@ -91,7 +90,7 @@ class SolutionFib {
 
         int curr = 0;
 
-        for (int i = 2; i<=n; i++) {
+        for (int i = 2; i <= n; i++) {
             curr = prev1 + prev2;
         }
 

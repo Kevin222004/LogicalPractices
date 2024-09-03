@@ -7,7 +7,8 @@ public class findAcharInString {
         char key = 'v';
         System.out.println(checkKey(key, str, 0, n));
     }
-    static boolean checkKey(char key, String str, int i,int length) {
+
+    static boolean checkKey(char key, String str, int i, int length) {
         if (i >= length) {
             return false;
         }
@@ -15,6 +16,6 @@ public class findAcharInString {
             return true;
         }
 
-        return checkKey(key, str, i+1, length);
+        return checkKey(key, str, i + 1, length);
     }
 }

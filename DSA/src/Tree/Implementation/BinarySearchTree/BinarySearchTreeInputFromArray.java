@@ -1,17 +1,16 @@
 package Tree.Implementation.BinarySearchTree;
 
-import java.util.Scanner;
-
 public class BinarySearchTreeInputFromArray {
 
     private Node root;
 
     public BinarySearchTreeInputFromArray() {
     }
-    
+
     public boolean isEmpty() {
         return root == null;
     }
+
     public void display() {
         display(root, "Root Nodes: ");
     }
@@ -44,8 +43,7 @@ public class BinarySearchTreeInputFromArray {
 
         if (node.value > data) {
             node.left = insertIntoBst(node.left, data);
-        }
-        else {
+        } else {
             node.right = insertIntoBst(node.right, data);
         }
 

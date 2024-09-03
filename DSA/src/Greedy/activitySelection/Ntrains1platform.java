@@ -8,18 +8,20 @@
 
 package Greedy.activitySelection;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Ntrains1platform {
     public static void main(String[] args) {
         int n = 4;
         int[] arrivalTime = {5, 8, 2, 4};
-        int[] departureTime = {7, 11, 6, 5};   
+        int[] departureTime = {7, 11, 6, 5};
         System.out.println(maxTrain(n, arrivalTime, departureTime));
     }
 
     public static int maxTrain(int n, int[] arrivalTime, int[] departureTime) {
-    
+
         List<Pair> pair = new ArrayList<>();
         for (int i = 0; i < departureTime.length; i++) {
             pair.add(new Pair(arrivalTime[i], departureTime[i]));
@@ -31,11 +33,11 @@ public class Ntrains1platform {
         System.out.println("[" + pair.get(0).first + ", " + pair.get(0).last + "]");
         int lastDep = pair.get(0).last;
         for (int i = 1; i < pair.size(); i++) {
-            if ( pair.get(i).first >= lastDep) {
+            if (pair.get(i).first >= lastDep) {
                 count++;
-                System.out.println("["+pair.get(i).first + ", " + pair.get(i).last+"]");
+                System.out.println("[" + pair.get(i).first + ", " + pair.get(i).last + "]");
                 lastDep = pair.get(i).last;
-            }   
+            }
         }
 
         return count;
@@ -45,7 +47,7 @@ public class Ntrains1platform {
 
         int first;
         int last;
-        
+
         Pair(int first, int last) {
             this.first = first;
             this.last = last;

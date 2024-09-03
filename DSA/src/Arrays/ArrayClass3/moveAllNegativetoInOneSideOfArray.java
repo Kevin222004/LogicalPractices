@@ -20,8 +20,8 @@ public class moveAllNegativetoInOneSideOfArray {
 
     // 2 pointer
     static int[] moveNegativeElementsToLeftSide(int[] arr) {
-         int point = 0;
-        for (int i=0; i< arr.length; i++) {
+        int point = 0;
+        for (int i = 0; i < arr.length; i++) {
             if (arr[i] < 0) {
                 int temp = arr[i];
                 arr[i] = arr[point];
@@ -39,14 +39,12 @@ public class moveAllNegativetoInOneSideOfArray {
         while (low <= high) {
             if (arr[low] < 0) {
                 low++;
-            }
-            else if (arr[high] > 0) {
+            } else if (arr[high] > 0) {
                 high--;
-            }
-            else {
+            } else {
                 int temp = arr[low];
                 arr[low] = arr[high];
-                arr[high] =temp;
+                arr[high] = temp;
             }
         }
         return arr;

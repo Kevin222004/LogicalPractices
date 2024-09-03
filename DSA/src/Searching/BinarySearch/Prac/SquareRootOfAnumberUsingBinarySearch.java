@@ -11,13 +11,13 @@ public class SquareRootOfAnumberUsingBinarySearch {
         int ans = squareRootUsingBinarySearch(Square);
         double an = 0;
         for (int i = 0; i < 2; i++) {
-            for (double j = ans; j*j<=Square; j = j + step) {
+            for (double j = ans; j * j <= Square; j = j + step) {
                 an = j;
             }
-            step = step/10;
+            step = step / 10;
 
         }
-        System.out.println(an );
+        System.out.println(an);
     }
 
     // babbar slgo is slight different
@@ -28,16 +28,14 @@ public class SquareRootOfAnumberUsingBinarySearch {
         int end = x;
 
         while (start <= end) {
-            int mid = start + (end - start)/2;
+            int mid = start + (end - start) / 2;
             int multi = mid * mid;
             if (multi == x) {
                 ans = mid;
                 break;
-            }
-            else if (multi > x) {
+            } else if (multi > x) {
                 end = mid - 1;
-            }
-            else if (multi < x) {
+            } else if (multi < x) {
 //                ans = mid;
                 start = mid + 1;
             }

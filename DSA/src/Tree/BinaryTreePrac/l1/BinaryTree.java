@@ -105,8 +105,7 @@ public class BinaryTree {
                 if (!queue.isEmpty()) {
                     queue.add("null");
                 }
-            }
-            else {
+            } else {
                 Node currNodeInQueue = (Node) queue.remove();
 
                 if (currNodeInQueue.left != null) {
@@ -129,7 +128,7 @@ public class BinaryTree {
 
     //--------------------------In Order Traversal-------------------------------//
     private void InOrderTraversal(Node root) {
-        if (root ==null) {
+        if (root == null) {
             return;
         }
 
@@ -148,7 +147,7 @@ public class BinaryTree {
 
     //---------------------------Pre-Order----------------//
     private void PreOrderTraversal(Node root) {
-        if (root ==null) {
+        if (root == null) {
             return;
         }
 
@@ -168,7 +167,7 @@ public class BinaryTree {
     /////////////////////////////////////////////////////////////////////////
     //----------------------Post-order-------------------------//
     private void postOrderTraversal(Node root) {
-        if (root ==null) {
+        if (root == null) {
             return;
         }
 

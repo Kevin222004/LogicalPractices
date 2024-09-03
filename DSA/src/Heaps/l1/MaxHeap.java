@@ -1,7 +1,6 @@
 package Heaps.l1;
 
 import java.util.ArrayList;
-import java.util.*;
 
 public class MaxHeap {
 
@@ -16,11 +15,11 @@ public class MaxHeap {
     }
 
     public int left(int index) {
-        return index*2 + 1;
+        return index * 2 + 1;
     }
 
     public int right(int index) {
-        return (2*index)+2;
+        return (2 * index) + 2;
     }
 
     private void swap(int first, int second) {
@@ -29,10 +28,10 @@ public class MaxHeap {
         list.set(second, temp);
     }
 
-/* --------------------------------  insertion ------------------------------------*/
+    /* --------------------------------  insertion ------------------------------------*/
     void insert(int value) {
         list.add(value);
-        upheap(list.size()-1);
+        upheap(list.size() - 1);
     }
 
     void upheap(int index) {
@@ -51,8 +50,8 @@ public class MaxHeap {
 
     public int delete() {
         int val = list.get(0);
-        list.set(0, list.size()-1);
-        list.remove(list.size()-1);
+        list.set(0, list.size() - 1);
+        list.remove(list.size() - 1);
 
         int index = 0;
         while (index < list.size()) {
@@ -61,18 +60,17 @@ public class MaxHeap {
             int largest = index;
 
             // we find the largest element in index, left, right
-            if (left < getList().size() && list.get(largest) < list.get(left)){
+            if (left < getList().size() && list.get(largest) < list.get(left)) {
                 largest = left;
             }
-            if (right < getList().size() && list.get(largest) < list.get(right)){
+            if (right < getList().size() && list.get(largest) < list.get(right)) {
                 largest = right;
             }
             // we find the largest number in left right and index
 
             if (largest == index) {
                 break;
-            }
-            else {
+            } else {
                 swap(index, largest);
                 index = largest;
             }

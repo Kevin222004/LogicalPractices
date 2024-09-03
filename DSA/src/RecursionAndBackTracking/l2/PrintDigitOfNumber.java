@@ -11,7 +11,7 @@ public class PrintDigitOfNumber {
         }
         int newValue = n / 10;
         PrintAllDigit(newValue);
-        int digit = n%10;
+        int digit = n % 10;
         System.out.println(digit);
     }
 }

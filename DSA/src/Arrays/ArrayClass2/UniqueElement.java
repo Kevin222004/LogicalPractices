@@ -5,7 +5,7 @@ Every element occurs 1 time but only 1 is their which come 1 find that
 
 */
 
-package Arrays.ArrayClass2;
+package DSA.src.Arrays.ArrayClass2;
 
 public class UniqueElement {
 

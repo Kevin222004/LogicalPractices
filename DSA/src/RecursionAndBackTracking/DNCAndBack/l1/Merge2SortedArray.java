@@ -12,15 +12,15 @@ public class Merge2SortedArray {
         int[] arr2 = {3, 5, 7, 9, 11};
 
     }
+
     static int[] merge(int[] arr1, int[] arr2) {
         int[] ans = new int[arr2.length + arr1.length];
-        int i =0, k=0, j=0;
+        int i = 0, k = 0, j = 0;
         while (i < arr1.length && j < arr2.length) {
             if (arr1[i] <= arr2[j]) {
                 ans[k] = arr1[i];
                 i++;
-            }
-            else {
+            } else {
                 ans[k] = arr2[j];
                 j++;
             }
@@ -29,11 +29,13 @@ public class Merge2SortedArray {
 
         while (i < arr1.length) {
             ans[k] = arr1[i];
-            i++;k++;
+            i++;
+            k++;
         }
         while (j < arr2.length) {
             ans[k] = arr2[j];
-            j++;k++;
+            j++;
+            k++;
         }
         return ans;
     }

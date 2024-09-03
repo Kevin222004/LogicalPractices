@@ -33,7 +33,7 @@ public class middleOfLinkedList {
 
     static void print(node head) {
         node temp = head;
-        while (temp!=null) {
+        while (temp != null) {
             System.out.print(temp.data + " ");
             temp = temp.next;
         }
@@ -48,6 +48,7 @@ public class middleOfLinkedList {
             this.data = data;
             this.next = next;
         }
+
         public node(int data) {
             this.data = data;
         }

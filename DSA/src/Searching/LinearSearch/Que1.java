@@ -1,7 +1,7 @@
 // Search in String
 package Searching.LinearSearch;
 
-public class Que1  {
+public class Que1 {
     public static void main(String[] args) {
         System.out.println(SearchInString("Kevin", 'K'));
         System.out.println(SearchInString("tomJerry", 'y'));

@@ -10,5 +10,5 @@ leet code :- 32 LongestValidParanthesis
 package Stack.prac;
 
 public class LongestValidParanthesis {
-    
+
 }

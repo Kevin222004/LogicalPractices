@@ -4,9 +4,11 @@ public class DoublyLinkedListImplementation {
     public static void main(String[] args) {
         DoublyLinkedList dll = new DoublyLinkedList();
 
-        dll.insertAtFirst(3);dll.insertAtFirst(2);dll.insertAtFirst(1);
+        dll.insertAtFirst(3);
+        dll.insertAtFirst(2);
+        dll.insertAtFirst(1);
         dll.insertAtLast(4);
-        dll.insertAtIndex(0,3);
+        dll.insertAtIndex(0, 3);
         dll.printDoublyLinkedList();
     }
 }
@@ -36,8 +38,7 @@ class DoublyLinkedList {
         Node node = new Node(value);
         if (size == 0) {
             insertAtFirst(value);
-        }
-        else {
+        } else {
             Tail.nextNode = node;
             node.previousNode = Tail;
             Tail = node;
@@ -46,8 +47,14 @@ class DoublyLinkedList {
     }
 
     public void insertAtIndex(int value, int index) {
-        if (index == 0) { insertAtFirst(value); return; }
-        if (index == size) { insertAtLast(value); return; }
+        if (index == 0) {
+            insertAtFirst(value);
+            return;
+        }
+        if (index == size) {
+            insertAtLast(value);
+            return;
+        }
         Node temp = Head;
         for (int i = 1; i < index; i++) {
             temp = temp.nextNode;

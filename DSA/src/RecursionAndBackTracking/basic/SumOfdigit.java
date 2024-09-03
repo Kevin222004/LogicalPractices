@@ -20,6 +20,6 @@ public class SumOfdigit {
             return 0;
         }
 
-        return (num%10) + sumOfDigit(num/10);
+        return (num % 10) + sumOfDigit(num / 10);
     }
 }

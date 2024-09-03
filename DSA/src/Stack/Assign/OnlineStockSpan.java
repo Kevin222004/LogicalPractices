@@ -1,4 +1,4 @@
-package Stack.Assign;
+package DSA.src.Stack.Assign;
 
 public class OnlineStockSpan {
 }

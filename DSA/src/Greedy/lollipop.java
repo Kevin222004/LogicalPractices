@@ -21,16 +21,16 @@ public class lollipop {
     public static int amountToPurcaseAllLollipop(int[] arr) {
         int totalPrice = 0;
         int i = 0;
-        int j = arr.length-1;
+        int j = arr.length - 1;
 
         Arrays.sort(arr);
-        
+
         while (i <= j) {
             totalPrice += arr[i];
             i++;
             j = j - 2;
         }
-  
+
 
         return totalPrice;
     }

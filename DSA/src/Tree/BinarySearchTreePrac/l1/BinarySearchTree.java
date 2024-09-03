@@ -10,6 +10,7 @@ public class BinarySearchTree {
     public boolean isEmpty() {
         return root == null;
     }
+
     public void display() {
         display(root, "Root Nodes: ");
     }
@@ -42,8 +43,7 @@ public class BinarySearchTree {
 
         if (node.value > data) {
             node.left = insertIntoBst(node.left, data);
-        }
-        else {
+        } else {
             node.right = insertIntoBst(node.right, data);
         }
 
@@ -79,8 +79,7 @@ public class BinarySearchTree {
         }
         if (root.value > data) {
             return search(root.left, data);
-        }
-        else {
+        } else {
             return search(root.right, data);
         }
     }

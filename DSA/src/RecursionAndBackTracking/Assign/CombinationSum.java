@@ -6,14 +6,15 @@ https://leetcode.com/problems/combination-sum/description/
 
 package RecursionAndBackTracking.Assign;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CombinationSum {
     class Solution {
         public List<List<Integer>> combinationSum(int[] candidates, int target) {
             List<
                     List<Integer>> ans = new ArrayList<>();
-            getCombSum(candidates, target, ans, new ArrayList<>(),0);
+            getCombSum(candidates, target, ans, new ArrayList<>(), 0);
             return ans;
         }
 
@@ -29,8 +30,8 @@ public class CombinationSum {
             for (int i = start; i < arr.length; i++) {
                 int ele = arr[i];
                 path.add(ele);
-                getCombSum(arr, target-ele, ans, path, i);
-                path.remove(path.size()-1);
+                getCombSum(arr, target - ele, ans, path, i);
+                path.remove(path.size() - 1);
             }
         }
     }

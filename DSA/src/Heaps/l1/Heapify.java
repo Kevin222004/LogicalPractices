@@ -5,17 +5,17 @@ public class Heapify {
 
     }
 
-    void heapify(int[] arr, int size,int i){
+    void heapify(int[] arr, int size, int i) {
         int index = i;
-        int left = 2*i + 1;
-        int right = 2*i+2;
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
         int largest = index;
 
         // we find the largest element in index, left, right
-        if (left < size && arr[largest] < arr[left]){
+        if (left < size && arr[largest] < arr[left]) {
             largest = left;
         }
-        if (right < size && arr[largest] < arr[right]){
+        if (right < size && arr[largest] < arr[right]) {
             largest = right;
         }
         // we find the largest number in left right and index
@@ -30,7 +30,7 @@ public class Heapify {
 
     private static void swap(int first, int second, int[] arr) {
         int temp = arr[first];
-        arr[first] =arr[second];
+        arr[first] = arr[second];
         arr[second] = temp;
     }
 }

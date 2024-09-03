@@ -27,8 +27,7 @@ public class BuildBinaryTreeFromArray {
     private boolean checkNode() {
         if (arr[index] != -1) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
@@ -40,8 +39,7 @@ public class BuildBinaryTreeFromArray {
             node.left = new Node(value);
             index++;
             populate(node.left);
-        }
-        else {
+        } else {
             index++;
         }
         boolean right = checkNode();
@@ -50,8 +48,7 @@ public class BuildBinaryTreeFromArray {
             node.right = new Node(value);
             index++;
             populate(node.right);
-        }
-        else {
+        } else {
             index++;
         }
     }
@@ -87,8 +84,8 @@ public class BuildBinaryTreeFromArray {
     }
 
 
-        private void InOrderTraversal(Node root) {
-        if (root ==null) {
+    private void InOrderTraversal(Node root) {
+        if (root == null) {
             return;
         }
 
@@ -107,7 +104,7 @@ public class BuildBinaryTreeFromArray {
 
     //---------------------------Pre-Order----------------//
     private void PreOrderTraversal(Node root) {
-        if (root ==null) {
+        if (root == null) {
             return;
         }
 
@@ -127,7 +124,7 @@ public class BuildBinaryTreeFromArray {
     /////////////////////////////////////////////////////////////////////////
     //----------------------Post-order-------------------------//
     private void postOrderTraversal(Node root) {
-        if (root ==null) {
+        if (root == null) {
             return;
         }
 

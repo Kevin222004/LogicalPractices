@@ -1,4 +1,4 @@
-package Arrays.ArrayClass1;
+package DSA.src.Arrays.ArrayClass1;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -22,7 +22,7 @@ public class Q1 {
     }
 
     public static int[] changeValueTo1(int[] arr) {
-        for (int i = 0; i< arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             if (arr[i] != 1) {
                 arr[i] = 1;
             }

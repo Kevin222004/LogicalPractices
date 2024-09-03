@@ -2,14 +2,18 @@
 
 // come back after watching object oriented here again to implement the dynamic stack
 
-package Stack.Impl;
+package DSA.src.Stack.Impl;
 
 public class StackImplementation {
 
     public static void main(String[] args) {
 
         StackImpl stack = new StackImpl(5);
-        stack.push(1);stack.push(2);stack.push(3);stack.push(4);stack.push(5);
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
         System.out.println(stack);
 
 
@@ -56,7 +60,7 @@ class StackImpl {
     }
 
     private boolean isFull() {
-        return ptr == data.length-1;
+        return ptr == data.length - 1;
     }
 
     private boolean isEmpty() {

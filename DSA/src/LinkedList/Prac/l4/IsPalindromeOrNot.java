@@ -2,14 +2,15 @@ package LinkedList.Prac.l4;
 
 public class IsPalindromeOrNot {
     public static void main(String[] args) {
-        Node n1 = new Node(1, new Node(2, new Node(3, new Node( 3,new Node(2, new Node(1))))));
+        Node n1 = new Node(1, new Node(2, new Node(3, new Node(3, new Node(2, new Node(1))))));
         System.out.println(isPalidrome(n1));
     }
 
     static boolean isPalidrome(Node head) {
         if (head == null) {
             return false;
-        } if (head.next == null) {
+        }
+        if (head.next == null) {
             return true;
         }
 
@@ -30,7 +31,7 @@ public class IsPalindromeOrNot {
         Node temp1 = head;
         Node temp2 = reversekahead;
         while (temp2 != null) {
-            if(temp1.data != temp2.data) {
+            if (temp1.data != temp2.data) {
                 return false;
             }
             temp2 = temp2.next;

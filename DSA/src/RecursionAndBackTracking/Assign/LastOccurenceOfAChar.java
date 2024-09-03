@@ -8,7 +8,7 @@ public class LastOccurenceOfAChar {
     public static void main(String[] args) {
         String str = "abcddefg";
         char chr = 'g';
-        System.out.println(lastOccu(str, chr, str.length()-1, -1));
+        System.out.println(lastOccu(str, chr, str.length() - 1, -1));
     }
 
     static int lastOccu(String str, char chr, int index, int ans) {
@@ -20,7 +20,7 @@ public class LastOccurenceOfAChar {
             return index;
         }
 
-        return lastOccu(str, chr, index-1, ans);
+        return lastOccu(str, chr, index - 1, ans);
     }
 
 }

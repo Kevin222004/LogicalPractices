@@ -3,7 +3,7 @@ package RecursionAndBackTracking.l3;
 public class ArraySortedOrNot {
 
     public static void main(String[] args) {
-        int[] arr = {4,3,1,2,4,4};
+        int[] arr = {4, 3, 1, 2, 4, 4};
 
         System.out.println(isSorted(arr, 1));
     }
@@ -14,10 +14,9 @@ public class ArraySortedOrNot {
             return true;
         }
 
-        if (arr[i] >= arr[i-1]) {
-           return isSorted(arr, i+1);
-        }
-        else {
+        if (arr[i] >= arr[i - 1]) {
+            return isSorted(arr, i + 1);
+        } else {
             return false;
         }
     }

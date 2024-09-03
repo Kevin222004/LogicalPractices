@@ -4,7 +4,6 @@ package Arrays.ArrayClass3;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class TransposeMatrix {
@@ -25,7 +24,7 @@ public class TransposeMatrix {
             for (int col = 0; col < matrix[row].length; col++) {
                 transposedCol.add((matrix[col][row]));
             }
-           transpose.add(transposedCol);
+            transpose.add(transposedCol);
         }
         return transpose;
     }

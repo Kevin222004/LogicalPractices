@@ -5,7 +5,7 @@ package Searching.LinearSearch;
 public class Que3 {
 
     public static void main(String[] args) {
-        int[] arr = {7,3, 6, 74, 31, -234 ,44, 99};
+        int[] arr = {7, 3, 6, 74, 31, -234, 44, 99};
         System.out.println(MinNum(arr));
     }
 

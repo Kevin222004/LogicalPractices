@@ -15,7 +15,9 @@ public class InsertAtBottom {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<Integer>();
         stack.push(5);
-        stack.push(15);stack.push(24);stack.push(32);
+        stack.push(15);
+        stack.push(24);
+        stack.push(32);
 
         insertAtBottom(stack, 11);
         System.out.println(stack.lastElement());

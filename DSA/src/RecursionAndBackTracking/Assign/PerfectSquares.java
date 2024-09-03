@@ -12,7 +12,7 @@ public class PerfectSquares {
     }
 
     // recursion
-    static int solvePsq (int n, int end) {
+    static int solvePsq(int n, int end) {
         if (n == 0) {
             return 0;
         }
@@ -21,8 +21,8 @@ public class PerfectSquares {
         }
 
         int mini = Integer.MAX_VALUE;
-        for (int i =1; i <= end; i++) {
-            int ans = solvePsq(n-(i*i), end);
+        for (int i = 1; i <= end; i++) {
+            int ans = solvePsq(n - (i * i), end);
             if (ans != Integer.MIN_VALUE) {
                 mini = Math.min(ans + 1, mini);
             }
@@ -31,7 +31,7 @@ public class PerfectSquares {
     }
 
     // recursion + memo
-    int solvePsqMemo (int n, int end, int[] dpArray) {
+    int solvePsqMemo(int n, int end, int[] dpArray) {
         if (n == 0) {
             return 0;
         }
@@ -42,8 +42,8 @@ public class PerfectSquares {
             return dpArray[n];
         }
         int mini = Integer.MAX_VALUE;
-        for (int i =1; i <= end; i++) {
-            int ans = solvePsqMemo(n-(i*i), end, dpArray);
+        for (int i = 1; i <= end; i++) {
+            int ans = solvePsqMemo(n - (i * i), end, dpArray);
             if (ans != Integer.MIN_VALUE) {
                 mini = Math.min(ans + 1, mini);
             }

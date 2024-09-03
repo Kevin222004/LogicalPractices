@@ -13,7 +13,7 @@ public class Print2DArrayColoumnwise {
                 {2, 5, 8},
                 {3, 6, 9}
         };
-        for (int row = 0; row< arr.length; row++) {
+        for (int row = 0; row < arr.length; row++) {
             for (int col = 0; col < arr[row].length; col++) {
                 System.out.print(arr[col][row] + " ");
             }

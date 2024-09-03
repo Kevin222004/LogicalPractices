@@ -6,7 +6,7 @@ sort that all the 0 on left side and all the 1 on right side
 
 */
 
-package Arrays.ArrayClass2;
+package DSA.src.Arrays.ArrayClass2;
 
 import java.util.Arrays;
 

@@ -1,7 +1,6 @@
 package HashMapsAndTires.l1;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class countThatHowMuchTimeACharaterCome {
     public static void main(String[] args) {
@@ -11,7 +10,7 @@ public class countThatHowMuchTimeACharaterCome {
 
     public static HashMap<Character, Integer> countAllChar(String input) {
         HashMap<Character, Integer> ans = new HashMap<>();
-        for (int i= 0; i < input.length(); i++) {
+        for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
             if (ans.containsKey(c)) {
                 ans.put(c, ans.get(c) + 1);

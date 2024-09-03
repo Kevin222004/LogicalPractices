@@ -12,17 +12,17 @@ public class Reverse {
 
     static String reverseString(String str) {
         char[] ch = str.toCharArray();
-        for (int i = 0; i < ch.length/2; i++) {
+        for (int i = 0; i < ch.length / 2; i++) {
             char temp = ch[i];
-            ch[i] = ch[ch.length-1-i];
-            ch[ch.length-1-i] = temp;
+            ch[i] = ch[ch.length - 1 - i];
+            ch[ch.length - 1 - i] = temp;
         }
         return Arrays.toString(ch);
     }
 
     static String repalceSpaces(String str) {
         StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < str.length();i++) {
+        for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) != ' ') {
                 stringBuilder.append(str.charAt(i));
             }

@@ -1,8 +1,8 @@
-package Arrays.ArrayClass1;
+package DSA.src.Arrays.ArrayClass1;
 
 public class ExtremePrint {
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5,6,7,8};
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
         ExtremePrint(arr);
 
     }
@@ -12,11 +12,9 @@ public class ExtremePrint {
             int j = arr.length - i - 1;
             if (i > j) {
                 break;
-            }
-            else if (i == j) {
+            } else if (i == j) {
                 System.out.print(arr[i]);
-            }
-            else {
+            } else {
                 System.out.print(arr[i] + " " + arr[j] + " ");
             }
         }

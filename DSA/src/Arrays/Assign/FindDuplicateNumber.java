@@ -9,22 +9,23 @@ public class FindDuplicateNumber {
         int[] arr = {1, 3, 2, 2, 4};
 
     }
-        public int findDuplicate(int[] nums) {
-            int ans = -1;
 
-            for (int i = 0; i < nums.length; i++) {
-                int index = Math.abs(nums[i]);
+    public int findDuplicate(int[] nums) {
+        int ans = -1;
 
-                // if already
-                if (nums[index] < 0) {
-                    ans = index;
-                    break;
-                }
+        for (int i = 0; i < nums.length; i++) {
+            int index = Math.abs(nums[i]);
 
-                // visited mark
-                nums[index] *= -1;
+            // if already
+            if (nums[index] < 0) {
+                ans = index;
+                break;
             }
-            return ans;
+
+            // visited mark
+            nums[index] *= -1;
         }
+        return ans;
+    }
 
 }

@@ -10,7 +10,7 @@ public class HouseRobber {
 
 class SolutionHouseRobber {
     public int rob(int[] nums) {
-         return roberryWithRecursion(nums, 0);
+        return roberryWithRecursion(nums, 0);
         // int[] dpArr = new int[nums.length+1];
         // Arrays.fill(dpArr, -1);
         // return roberryWithTopDown(nums, nums.length-1, dpArr);
@@ -75,23 +75,23 @@ class SolutionHouseRobber {
         // vector<int> dp(n+1, 0);
         // dp[0] = nums[0];
         int curr = 0;
-        for(int i=1; i<=n; i++) {
+        for (int i = 1; i <= n; i++) {
 
             int temp = 0;
-            if(i-2>=0)
+            if (i - 2 >= 0)
                 temp = prev2;
 
             int include = temp + nums[i];
             int exclude = prev1 + 0;
 
-            curr =  Math.max(include, exclude);
+            curr = Math.max(include, exclude);
             prev2 = prev1;
             prev1 = curr;
         }
 
         return prev1;
     }
- }
+}
 
 
 

@@ -22,7 +22,6 @@ public class PrintAllSubArraysUsingRe {
         for (int i = start; i <= end; i++) {
             System.out.print(nums.get(i) + " ");
         }
-        System.out.println();
         printSubArray_Util(nums, start, end + 1);
     }
 
